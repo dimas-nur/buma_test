@@ -1,3 +1,4 @@
+import 'package:components/banner/flavor_banner.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
@@ -6,13 +7,19 @@ class BumaHrisApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: FlavorConfig.instance.values.appName,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
+    return FlavorBanner(
+      color: FlavorConfig.instance.color,
+      message: FlavorConfig.instance.name.toUpperCase(),
+      isProduction: FlavorConfig.isProduction,
+      child: MaterialApp(
+        title: FlavorConfig.instance.values.appName,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+          useMaterial3: true,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: MyHomePage(title: FlavorConfig.instance.values.appName),
       ),
-      home: MyHomePage(title: FlavorConfig.instance.values.appName),
     );
   }
 }
