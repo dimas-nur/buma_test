@@ -1,1 +1,3 @@
-# Module - Shared Dependencies
+## Module - Shared Dependencies
+
+Defines versions of shared dependencies.
