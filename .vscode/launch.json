@@ -1,0 +1,74 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "BUMA HRIS - DEV",
+      "program": "apps/buma_hris/lib/main_dev.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "development"]
+    },
+    {
+      "name": "BUMA HRIS - DEV (profile mode)",
+      "program": "apps/buma_hris/lib/main_dev.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "development"],
+      "flutterMode": "profile"
+    },
+    {
+      "name": "BUMA HRIS - DEV (release mode)",
+      "program": "apps/buma_hris/lib/main_dev.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "development"],
+      "flutterMode": "release"
+    },
+    {
+      "name": "BUMA HRIS - STAGING",
+      "program": "apps/buma_hris/lib/main_staging.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "staging"]
+    },
+    {
+      "name": "BUMA HRIS - STAGING (profile mode)",
+      "program": "apps/buma_hris/lib/main_staging.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "staging"],
+      "flutterMode": "profile"
+    },
+    {
+      "name": "BUMA HRIS - STAGING (release mode)",
+      "program": "apps/buma_hris/lib/main_staging.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "staging"],
+      "flutterMode": "release"
+    },
+    {
+      "name": "BUMA HRIS - PROD",
+      "program": "apps/buma_hris/lib/main_prod.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "production"]
+    },
+    {
+      "name": "BUMA HRIS - PROD (profile mode)",
+      "program": "apps/buma_hris/lib/main_prod.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "production"],
+      "flutterMode": "profile"
+    },
+    {
+      "name": "BUMA HRIS - PROD (release mode)",
+      "program": "apps/buma_hris/lib/main_prod.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "production"],
+      "flutterMode": "release"
+    }
+  ]
+}
