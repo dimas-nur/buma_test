@@ -22,6 +22,7 @@ class FlavorConfig {
     this.values,
   );
 
+  /// Create an FlavorConfig object with the given values.
   factory FlavorConfig({
     required Flavor flavor,
     required Color color,
@@ -43,6 +44,7 @@ class FlavorConfig {
 
   static late final FlavorConfig _instance;
 
+  /// Gets the current instance of the FlavorConfig.
   static FlavorConfig get instance {
     return _instance;
   }
