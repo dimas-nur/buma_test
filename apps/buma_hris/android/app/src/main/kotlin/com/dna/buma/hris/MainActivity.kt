@@ -1,4 +1,4 @@
-package com.example.buma_hris
+package com.dna.buma.hris
 
 import io.flutter.embedding.android.FlutterActivity
 
