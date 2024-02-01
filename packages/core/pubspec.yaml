@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Local dependencies
+  # Local Dependencies
   shared_dependencies:
     path: ../shared_dependencies
 
@@ -19,7 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # Inherited dev dependencies
+  # Inherited DEV Dependencies
   flutter_lints:
 
 flutter:

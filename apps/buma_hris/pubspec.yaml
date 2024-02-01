@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Local dependencies
+  # Local Dependencies
   core:
     path: ../../packages/core
   shared_dependencies:
@@ -24,7 +24,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # Inherited dev dependencies
+  # Inherited DEV Dependencies
+  ## Icon generation
+  flutter_launcher_icons:
+  ## Others
   flutter_lints:
 
 flutter:
