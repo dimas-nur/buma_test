@@ -9,6 +9,7 @@ class Gap {
   /// [INFO]
   ///
   /// Gaps that related with width
+  static final w2 = SizedBox(width: AppSizes.w2);
   static final w4 = SizedBox(width: AppSizes.w4);
   static final w8 = SizedBox(width: AppSizes.w8);
   static final w12 = SizedBox(width: AppSizes.w12);
@@ -29,6 +30,7 @@ class Gap {
   /// [INFO]
   ///
   /// Gaps that related with height
+  static final h2 = SizedBox(height: AppSizes.h2);
   static final h4 = SizedBox(height: AppSizes.h4);
   static final h8 = SizedBox(height: AppSizes.h8);
   static final h12 = SizedBox(height: AppSizes.h12);

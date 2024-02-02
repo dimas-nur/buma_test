@@ -1,6 +1,5 @@
 import 'package:components/gaps/gap.dart';
-import 'package:core/resources/app_colors.dart';
-import 'package:core/resources/app_typography.dart';
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryAppBar extends StatelessWidget {
@@ -31,7 +30,7 @@ class PrimaryAppBar extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: AppTypography.h5,
+              style: AppTypography.h5.colorWhite,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
