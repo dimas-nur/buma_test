@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:core/resources/resources.dart';
+import 'package:components/components.dart';
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,7 @@ class _EmployeeServicesPageState extends State<EmployeeServicesPage>
   bool scrollListener(ScrollNotification scrollInfo) {
     var scroll = false;
     if (scrollInfo.metrics.axis == Axis.vertical) {
-      _appBarAnimationController.animateTo(scrollInfo.metrics.pixels / 40);
+      _appBarAnimationController.animateTo(scrollInfo.metrics.pixels / 20);
       return scroll = true;
     }
     return scroll;
@@ -47,12 +48,29 @@ class _EmployeeServicesPageState extends State<EmployeeServicesPage>
               child: CustomScrollView(
                 slivers: [
                   SliverToBoxAdapter(
-                    child: Assets.images.imgEmpSrvBackground.svg(
-                      width: 1.sw,
-                      height: 206.h,
-                      fit: BoxFit.cover,
+                    child: Stack(
+                      children: [
+                        Positioned.fill(
+                          bottom: 64.h,
+                          child: Assets.images.imgEmpSrvBackground.svg(
+                            fit: BoxFit.cover,
+                            width: 1.sw,
+                            height: 206.h,
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Gap.height(
+                              AppSizes.statusBarHeight + kTextTabBarHeight + 24,
+                            ),
+                            const EmployeeServiceLeaveCard(),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
+                  GapSliver.h36,
                   // TODO: Remove dummy list
                   SliverList.builder(
                     itemBuilder: (context, index) {
