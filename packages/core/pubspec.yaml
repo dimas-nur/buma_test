@@ -1,0 +1,26 @@
+name: core
+description: The heart of the app, providing essential building blocks and shared functionality.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local Dependencies
+  shared_dependencies:
+    path: ../shared_dependencies
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Inherited DEV Dependencies
+  flutter_lints:
+
+flutter:
+  uses-material-design: true
