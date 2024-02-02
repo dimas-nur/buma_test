@@ -1,5 +1,5 @@
-name: core
-description: The heart of the app, providing essential building blocks and shared functionality.
+name: home
+description: Feature Home.
 version: 0.1.0+1
 publish_to: none
 
@@ -7,13 +7,9 @@ environment:
   sdk: ">=3.2.6 <4.0.0"
   flutter: ">=1.17.0"
 
-dependencies:
-  flutter:
-    sdk: flutter
-
-  # Local Dependencies
-  shared_dependencies:
-    path: ../shared_dependencies
+# Local Dependencies
+shared_dependencies:
+  path: ../../packages/shared_dependencies
 
 dev_dependencies:
   flutter_test:

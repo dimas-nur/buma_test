@@ -1,6 +1,6 @@
 name: components
 description: A collection of reusable UI elements for a consistent and efficient app experience.
-version: 0.1.0
+version: 0.1.0+1
 publish_to: none
 
 environment:
