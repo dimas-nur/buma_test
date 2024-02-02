@@ -14,12 +14,19 @@ dependencies:
   # Features
   home:
     path: ../../features/home
+  employee_services:
+    path: ../../features/employee_services
 
   # Local Dependencies
+  resources:
+    path: ../resources
   shared_dependencies:
     path: ../shared_dependencies
 
   # Inherited Dependencies
+  ## UI
+  google_fonts:
+  flutter_screenutil:
   ## Routing
   auto_route:
   # Dependency Injection
