@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:home/home.dart';
+import 'package:injectable/injectable.dart';
 
 import 'buma_hris_app_router.gr.dart';
 
+@singleton
 @AutoRouterConfig(
   modules: [
     HomeRouteModule,
