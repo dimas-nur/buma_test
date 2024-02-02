@@ -1,5 +1,6 @@
 import 'package:core/resources/dummy_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// AppTheme is a utility class that provides predefined light and dark themes
 /// for a Flutter application. It utilizes a custom ColorScheme with colors
@@ -12,6 +13,8 @@ class AppTheme {
   /// A ThemeData object representing the light theme with colors defined in
   /// the (AppColors / DummyColors) class.
   static ThemeData light = ThemeData(
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    textTheme: GoogleFonts.poppinsTextTheme(),
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
       primary: DummyColors.primaryLight,
@@ -52,6 +55,8 @@ class AppTheme {
   /// A ThemeData object representing the dark theme with colors defined in
   /// the (AppColors / DummyColors) class.
   static ThemeData dark = ThemeData(
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    textTheme: GoogleFonts.poppinsTextTheme(),
     colorScheme: const ColorScheme(
       brightness: Brightness.dark,
       primary: DummyColors.primaryDark,

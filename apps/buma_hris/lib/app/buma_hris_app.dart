@@ -31,6 +31,14 @@ class _BumaHrisAppState extends State<BumaHrisApp> {
           darkTheme: AppTheme.dark,
           debugShowCheckedModeBanner: false,
           routerConfig: _appRouter.config(),
+          builder: (context, widget) {
+            return MediaQuery(
+              data: MediaQuery.of(context).copyWith(
+                textScaler: const TextScaler.linear(1.0),
+              ),
+              child: widget ?? const SizedBox.shrink(),
+            );
+          },
         ),
       ),
     );
