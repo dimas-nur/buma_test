@@ -1,0 +1,21 @@
+name: resources
+description: Centralizes and manages all static assets, including images, icons, and fonts files, for consistent and efficient access throughout the app.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local dependencies
+  shared_dependencies:
+    path: ../../packages/shared_dependencies
+
+dev_dependencies:
+  # Inherited DEV Dependencies
+  ## Others
+  flutter_lints:
