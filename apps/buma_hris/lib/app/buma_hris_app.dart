@@ -27,10 +27,8 @@ class _BumaHrisAppState extends State<BumaHrisApp> {
         isProduction: FlavorConfig.isProduction,
         child: MaterialApp.router(
           title: FlavorConfig.instance.values.appName,
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-            useMaterial3: true,
-          ),
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
           debugShowCheckedModeBanner: false,
           routerConfig: _appRouter.config(),
         ),
