@@ -48,6 +48,7 @@ class AppColors {
   static const iconWhite = Color(0xFFFFFFFF);
   static const iconLight = Color(0xFFB2BFC8);
   static const iconLightDark = Color(0xFF7E93A8);
+  static const iconDark = Color(0xFF333F47);
 
   /// Border Colors
   ///
