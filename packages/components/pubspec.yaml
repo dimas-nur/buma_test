@@ -12,8 +12,14 @@ dependencies:
     sdk: flutter
 
   # Local Dependencies
+  core:
+    path: ../core
   shared_dependencies:
     path: ../shared_dependencies
+
+  # Inherited Dependencies
+  # UI
+  flutter_screenutil:
 
 dev_dependencies:
   flutter_test:
