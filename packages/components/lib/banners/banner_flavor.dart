@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// A widget that displays a banner at the top-left corner of the screen
 /// for non-production environments, providing visual feedback about the application flavor.
-class FlavorBanner extends StatelessWidget {
+class BannerFlavor extends StatelessWidget {
   /// Constructs a FlavorBanner widget.
   ///
   /// Parameters:
@@ -10,7 +10,7 @@ class FlavorBanner extends StatelessWidget {
   ///   - `message`: The message to be displayed on the banner.
   ///   - `isProduction`: A flag indicating whether the application is in production.
   ///   - `child`: The child widget to be displayed behind the banner.
-  const FlavorBanner({
+  const BannerFlavor({
     super.key,
     required this.color,
     required this.message,

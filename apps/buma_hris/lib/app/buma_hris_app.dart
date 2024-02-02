@@ -1,4 +1,4 @@
-import 'package:components/banner/flavor_banner.dart';
+import 'package:components/banners/banner_flavor.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +21,7 @@ class _BumaHrisAppState extends State<BumaHrisApp> {
       designSize: BumaHrisApp._designSize,
       minTextAdapt: true,
       splitScreenMode: true,
-      child: FlavorBanner(
+      child: BannerFlavor(
         color: FlavorConfig.instance.color,
         message: FlavorConfig.instance.name.toUpperCase(),
         isProduction: FlavorConfig.isProduction,
