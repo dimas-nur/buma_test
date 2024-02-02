@@ -2,6 +2,7 @@ name: sera_test
 
 packages:
   - apps/*
+  - features/*
   - packages/*
 
 scripts:

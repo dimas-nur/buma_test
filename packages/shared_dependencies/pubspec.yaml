@@ -6,8 +6,24 @@ publish_to: none
 environment:
   sdk: ">=3.2.6 <4.0.0"
 
+dependencies:
+  # UI
+  flutter_screenutil: ^5.9.0
+
+  # Routing
+  auto_route: ^7.8.4
+
+  # Dependency Injection
+  get_it: ^7.6.7
+  injectable: ^2.3.2
+
 dev_dependencies:
   flutter_lints: ^2.0.0
+
+  # Code generation
+  build_runner: ^2.4.8
+  auto_route_generator: ^7.3.2
+  injectable_generator: ^2.4.1
 
   # Icon generation
   flutter_launcher_icons: ^0.13.1

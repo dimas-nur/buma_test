@@ -25,6 +25,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
+  auto_route:
+    dependency: transitive
+    description:
+      name: auto_route
+      sha256: "82f8df1d177416bc6b7a449127d0270ff1f0f633a91f2ceb7a85d4f07c3affa1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.8.4"
   boolean_selector:
     dependency: transitive
     description:
@@ -79,7 +87,7 @@ packages:
       path: "../../packages/components"
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.0+1"
   convert:
     dependency: transitive
     description:
@@ -94,7 +102,7 @@ packages:
       path: "../../packages/core"
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.0+1"
   crypto:
     dependency: transitive
     description:
@@ -140,11 +148,34 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      sha256: "8cf100b8e4973dc570b6415a2090b0bfaa8756ad333db46939efc3e774ee100d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.9.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  get_it:
+    dependency: transitive
+    description:
+      name: get_it
+      sha256: e6017ce7fdeaf218dc51a100344d8cb70134b80e28b760f8bb23c242437bafd7
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.6.7"
+  home:
+    dependency: "direct overridden"
+    description:
+      path: "../../features/home"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   image:
     dependency: transitive
     description:
@@ -153,6 +184,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.6"
+  injectable:
+    dependency: transitive
+    description:
+      name: injectable
+      sha256: cd3c422e13270c81f64ab73c80406b2b2ed563fe59d0ff2093eb7eee63d0bbeb
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.2"
   js:
     dependency: transitive
     description:
@@ -327,4 +366,4 @@ packages:
     version: "3.1.2"
 sdks:
   dart: ">=3.2.6 <4.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=3.13.0"
