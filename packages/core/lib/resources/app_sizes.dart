@@ -54,6 +54,7 @@ class AppSizes {
   /// [INFO]
   ///
   /// Sizes that related with height
+  static final h2 = 2.0.h;
   static final h4 = 4.0.h;
   static final h8 = 8.0.h;
   static final h12 = 12.0.h;

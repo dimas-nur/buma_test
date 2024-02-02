@@ -33,13 +33,21 @@ class AppColors {
   /// Background Colors
   ///
   /// Used for background elements, providing visual hierarchy.
+  ///
+  /// Background/background-white
   static const backgroundWhite = Color(0xFFFFFFFF);
 
   /// Text Colors
   ///
   /// Used for text content with different emphasis.
+  ///
+  /// Text/text-white
   static const textWhite = Color(0xFFFFFFFF);
+
+  /// Text/text-lightdark
   static const textLightDark = Color(0xFF7E93A8);
+
+  /// Text/text-dark
   static const textDark = Color(0xFF333F47);
 
   /// Icon Colors
@@ -53,5 +61,7 @@ class AppColors {
   /// Border Colors
   ///
   /// Used for defining borders and visual separations.
+  ///
+  /// Stroke/Stroke-Tertiary
   static const strokeTertiary = Color(0xFFE8ECF5);
 }

@@ -1,3 +1,4 @@
+import 'package:core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
 /// [Info]
@@ -123,6 +124,15 @@ extension XTextStyle on TextStyle {
 
   /// Change color
   TextStyle toColor(Color? color) => copyWith(color: color);
+
+  /// Change to color `Text/text-white`
+  TextStyle get colorWhite => toColor(AppColors.textWhite);
+
+  /// Change to color `Text/text-lightdark`
+  TextStyle get colorLightDark => toColor(AppColors.textLightDark);
+
+  /// Change to color `Text/text-dark`
+  TextStyle get colorDark => toColor(AppColors.textDark);
 
   /// FontWeight.w100
   TextStyle get thin => toWeight(FontWeight.w100);

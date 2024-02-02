@@ -11,6 +11,21 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/calendar_month.svg
+  SvgGenImage get calendarMonth =>
+      const SvgGenImage('assets/icons/calendar_month.svg');
+
+  /// File path: assets/icons/event_repeat.svg
+  SvgGenImage get eventRepeat =>
+      const SvgGenImage('assets/icons/event_repeat.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [calendarMonth, eventRepeat];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -27,6 +42,7 @@ class Assets {
 
   static const String package = 'resources';
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
