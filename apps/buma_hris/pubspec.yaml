@@ -20,6 +20,10 @@ dependencies:
   shared_dependencies:
     path: ../../packages/shared_dependencies
 
+  # Inherited Dependencies
+  ## UI
+  flutter_screenutil:
+
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
