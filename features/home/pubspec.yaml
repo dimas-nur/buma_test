@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
 
   # Local Dependencies
+  core:
+    path: ../../packages/core
   shared_dependencies:
     path: ../../packages/shared_dependencies
 
@@ -19,8 +21,8 @@ dependencies:
   ## Routing
   auto_route:
   # Dependency Injection
-  get_it: ^7.6.7
-  injectable: ^2.3.2
+  get_it:
+  injectable:
 
 dev_dependencies:
   flutter_test:

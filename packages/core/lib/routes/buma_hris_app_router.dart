@@ -1,13 +1,18 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:employee_services/employee_services.dart';
 import 'package:home/home.dart';
 import 'package:injectable/injectable.dart';
 
 import 'buma_hris_app_router.gr.dart';
 
+export 'package:home/home.gm.dart';
+export 'package:employee_services/employee_services.gm.dart';
+
 @singleton
 @AutoRouterConfig(
   modules: [
     HomeRouteModule,
+    EmployeeServicesRouteModule,
   ],
 )
 class BumaHrisAppRouter extends $BumaHrisAppRouter {
@@ -42,6 +47,12 @@ class BumaHrisAppRouter extends $BumaHrisAppRouter {
             ),
           ],
         ),
+        ...[
+          _routeBuilder(
+            path: '/employee-services',
+            page: EmployeeServicesRoute.page,
+          )
+        ],
         RedirectRoute(path: '*', redirectTo: '/'),
       ];
 }
