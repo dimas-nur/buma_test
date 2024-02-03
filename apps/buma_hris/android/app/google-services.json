@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "502525211046",
+    "project_id": "buma-tech-test",
+    "storage_bucket": "buma-tech-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502525211046:android:8a966b401ac606d9c5df67",
+        "android_client_info": {
+          "package_name": "com.dna.buma.hris"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwR77O4zyZ6INql1IuJMHAXAJd39Izawg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502525211046:android:72c8d52ff201cd11c5df67",
+        "android_client_info": {
+          "package_name": "com.dna.buma.hris.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwR77O4zyZ6INql1IuJMHAXAJd39Izawg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502525211046:android:0acdc5144d58a3b3c5df67",
+        "android_client_info": {
+          "package_name": "com.dna.buma.hris.stg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwR77O4zyZ6INql1IuJMHAXAJd39Izawg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

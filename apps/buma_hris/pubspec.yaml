@@ -23,6 +23,8 @@ dependencies:
   # Inherited Dependencies
   ## UI
   flutter_screenutil:
+  ## Firebase
+  firebase_core:
 
   cupertino_icons: ^1.0.2
 
