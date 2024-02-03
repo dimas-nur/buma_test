@@ -18,23 +18,51 @@ class $AssetsIconsGen {
   SvgGenImage get calendarMonth =>
       const SvgGenImage('assets/icons/calendar_month.svg');
 
+  /// File path: assets/icons/document.svg
+  SvgGenImage get document => const SvgGenImage('assets/icons/document.svg');
+
   /// File path: assets/icons/event_repeat.svg
   SvgGenImage get eventRepeat =>
       const SvgGenImage('assets/icons/event_repeat.svg');
 
+  /// File path: assets/icons/form.svg
+  SvgGenImage get form => const SvgGenImage('assets/icons/form.svg');
+
+  /// File path: assets/icons/leave.svg
+  SvgGenImage get leave => const SvgGenImage('assets/icons/leave.svg');
+
+  /// File path: assets/icons/observation.svg
+  SvgGenImage get observation =>
+      const SvgGenImage('assets/icons/observation.svg');
+
+  /// File path: assets/icons/question.svg
+  SvgGenImage get question => const SvgGenImage('assets/icons/question.svg');
+
+  /// File path: assets/icons/travel.svg
+  SvgGenImage get travel => const SvgGenImage('assets/icons/travel.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [calendarMonth, eventRepeat];
+  List<SvgGenImage> get values => [
+        calendarMonth,
+        document,
+        eventRepeat,
+        form,
+        leave,
+        observation,
+        question,
+        travel
+      ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/img_emp_srv_background.svg
-  SvgGenImage get imgEmpSrvBackground =>
-      const SvgGenImage('assets/images/img_emp_srv_background.svg');
+  /// File path: assets/images/emp_srv_background.svg
+  SvgGenImage get empSrvBackground =>
+      const SvgGenImage('assets/images/emp_srv_background.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [imgEmpSrvBackground];
+  List<SvgGenImage> get values => [empSrvBackground];
 }
 
 class Assets {

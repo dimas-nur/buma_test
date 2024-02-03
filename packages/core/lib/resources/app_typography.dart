@@ -15,6 +15,26 @@ class AppTypography {
     color: AppColors.textDark,
   );
 
+  /// Sub Heading/Medium - H6
+  static TextStyle h6 = TextStyle(
+    inherit: false,
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    height: 1.45,
+    color: AppColors.textDark,
+  );
+
+  /// Sub Heading/Small - H8
+  static TextStyle h8 = TextStyle(
+    inherit: false,
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+    height: 1.33,
+    color: AppColors.textLightDark,
+  );
+
   /// Body Formatting/Small
   static TextStyle bodySmall = TextStyle(
     inherit: false,
