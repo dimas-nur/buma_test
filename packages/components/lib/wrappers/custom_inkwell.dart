@@ -19,7 +19,7 @@ class CustomInkWell extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        highlightColor: splashColor?.withOpacity(.15),
+        highlightColor: splashColor?.withOpacity(.1),
         splashColor: splashColor?.withOpacity(.1),
         borderRadius: borderRadius,
         onTap: onTap,
