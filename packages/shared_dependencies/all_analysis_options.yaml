@@ -1,0 +1,18 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+linter:
+  rules:
+    # Core lints (overrides from flutter_lints)
+    - prefer_final_locals
+    - prefer_single_quotes
+    - sort_constructors_first
+
+    # Flutter lints (additional emphasis)
+    - avoid_returning_null_for_future
+    - omit_local_variable_types
+    - always_declare_return_types

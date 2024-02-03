@@ -1,0 +1,42 @@
+name: buma_hris
+description: "HRIS Application for BUMA"
+
+publish_to: "none"
+
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local Dependencies
+  core:
+    path: ../../packages/core
+  components:
+    path: ../../packages/components
+  shared_dependencies:
+    path: ../../packages/shared_dependencies
+
+  # Inherited Dependencies
+  ## UI
+  flutter_screenutil:
+  ## Firebase
+  firebase_core:
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Inherited DEV Dependencies
+  ## Icon generation
+  flutter_launcher_icons:
+  ## Others
+  flutter_lints:
+
+flutter:
+  uses-material-design: true

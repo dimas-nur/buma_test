@@ -1,0 +1,47 @@
+name: employee_services
+description: Feature Employee Services.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local Dependencies
+  core:
+    path: ../../packages/core
+  components:
+    path: ../../packages/components
+  shared_dependencies:
+    path: ../../packages/shared_dependencies
+
+  # Inherited Dependencies
+  # UI
+  flutter_screenutil:
+  flutter_staggered_grid_view:
+  ## Routing
+  auto_route:
+  # Dependency Injection
+  get_it:
+  injectable:
+  # Others
+  intl:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Inherited DEV Dependencies
+  ## Code generation
+  build_runner:
+  auto_route_generator:
+  injectable_generator:
+  ## Others
+  flutter_lints:
+
+flutter:
+  uses-material-design: true
