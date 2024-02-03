@@ -7,4 +7,5 @@ export 'buttons/buttons.dart';
 export 'cards/cards.dart';
 export 'dividers/dividers.dart';
 export 'gaps/gaps.dart';
+export 'items/items.dart';
 export 'wrappers/wrappers.dart';

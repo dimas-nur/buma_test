@@ -22,6 +22,7 @@ dependencies:
   # Inherited Dependencies
   # UI
   flutter_screenutil:
+  flutter_staggered_grid_view:
   ## Routing
   auto_route:
   # Dependency Injection

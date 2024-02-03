@@ -52,7 +52,7 @@ class _EmployeeServicesPageState extends State<EmployeeServicesPage>
                       children: [
                         Positioned.fill(
                           bottom: 64.h,
-                          child: Assets.images.imgEmpSrvBackground.svg(
+                          child: Assets.images.empSrvBackground.svg(
                             fit: BoxFit.cover,
                             width: 1.sw,
                             height: 206.h,
@@ -64,23 +64,21 @@ class _EmployeeServicesPageState extends State<EmployeeServicesPage>
                             Gap.height(
                               AppSizes.statusBarHeight + kTextTabBarHeight + 24,
                             ),
-                            const EmployeeServiceLeaveCard(),
+                            const LeaveCard(),
                           ],
                         ),
                       ],
                     ),
                   ),
-                  GapSliver.h36,
-                  // TODO: Remove dummy list
-                  SliverList.builder(
-                    itemBuilder: (context, index) {
-                      return Container(
-                        height: 100.h,
-                        color: index.isEven ? Colors.grey : Colors.white,
-                      );
-                    },
-                    itemCount: 100,
+                  GapSliver.h16,
+                  const SliverToBoxAdapter(
+                    child: FavoriteMenuSection(),
                   ),
+                  GapSliver.h16,
+                  const SliverToBoxAdapter(
+                    child: TransactionSection(),
+                  ),
+                  GapSliver.h16,
                 ],
               ),
             ),
