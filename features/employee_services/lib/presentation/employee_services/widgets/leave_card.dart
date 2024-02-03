@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
-class EmployeeServiceLeaveCard extends StatelessWidget {
-  const EmployeeServiceLeaveCard({
+class LeaveCard extends StatelessWidget {
+  const LeaveCard({
     super.key,
   });
 
@@ -25,7 +25,7 @@ class EmployeeServiceLeaveCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                child: _EmployeeServiceLeaveCardItem(
+                child: _LeaveCardItem(
                   title: 'Cuti Tahunan',
                   daysDuration: 3,
                   endDate: DateTime(2024, 3, 24),
@@ -37,7 +37,7 @@ class EmployeeServiceLeaveCard extends StatelessWidget {
               ),
               Gap.w8,
               const Expanded(
-                child: _EmployeeServiceLeaveCardItem(
+                child: _LeaveCardItem(
                   title: 'Tahunan Diperpanjang',
                 ),
               ),
@@ -71,8 +71,8 @@ class EmployeeServiceLeaveCard extends StatelessWidget {
   }
 }
 
-class _EmployeeServiceLeaveCardItem extends StatelessWidget {
-  const _EmployeeServiceLeaveCardItem({
+class _LeaveCardItem extends StatelessWidget {
+  const _LeaveCardItem({
     required this.title,
     this.daysDuration = 0,
     this.endDate,
@@ -117,7 +117,7 @@ class _EmployeeServiceLeaveCardItem extends StatelessWidget {
             Flexible(
               child: Text(
                 '$daysDuration Days',
-                style: AppTypography.h5.colorDark,
+                style: AppTypography.h5,
                 textAlign: TextAlign.center,
               ),
             ),
