@@ -14,6 +14,7 @@ class PrimaryCard extends StatelessWidget {
     this.margin,
     this.borderRadius,
     this.backgroundColor = AppColors.backgroundWhite,
+    this.isWithBorder = true,
     this.borderColor = AppColors.strokeTertiary,
     this.borderWidth = 1,
     this.splashColor = AppColors.info500,
@@ -29,6 +30,7 @@ class PrimaryCard extends StatelessWidget {
     this.margin,
     this.borderRadius,
     this.backgroundColor = AppColors.backgroundWhite,
+    this.isWithBorder = true,
     this.borderColor = AppColors.strokeTertiary,
     this.borderWidth = 1,
     this.splashColor = AppColors.info500,
@@ -42,6 +44,7 @@ class PrimaryCard extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final BorderRadius? borderRadius;
   final Color backgroundColor;
+  final bool isWithBorder;
   final Color borderColor;
   final double borderWidth;
   final Color splashColor;
@@ -49,6 +52,7 @@ class PrimaryCard extends StatelessWidget {
 
   EdgeInsetsGeometry get _padding => padding ?? EdgeInsets.all(16.r);
   BorderRadius get _borderRadius => borderRadius ?? BorderRadius.circular(10.r);
+  bool get _isWithBorder => isWithBorder && borderWidth != 0;
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +65,11 @@ class PrimaryCard extends StatelessWidget {
         borderRadius: (_borderRadius).add(
           BorderRadius.all(
             Radius.circular(
-              (borderWidth != 0) ? 2 : 0,
+              _isWithBorder ? 2 : 0,
             ),
           ),
         ),
-        border: borderWidth != 0
+        border: _isWithBorder
             ? Border.all(
                 color: borderColor,
                 width: borderWidth,
