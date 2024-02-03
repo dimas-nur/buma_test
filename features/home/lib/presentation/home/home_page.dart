@@ -1,4 +1,5 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:core/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -16,8 +17,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: const Center(
-        child: Text('Home Page'),
+      body: Center(
+        child: FilledButton(
+          onPressed: () {
+            context.pushRoute(const EmployeeServicesRoute());
+          },
+          child: const Text('Employee Services'),
+        ),
       ),
     );
   }
