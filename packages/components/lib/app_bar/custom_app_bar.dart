@@ -1,4 +1,4 @@
-import 'package:components/buttons/primary_button_widget.dart';
+import 'package:components/buttons/custom_icon_button.dart';
 import 'package:components/gaps/gap.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
@@ -105,11 +105,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             leading!,
             Gap.w16,
           ] else if (_isHasBackButton(context)) ...[
-            PrimaryIconButton.type(
+            CustomIconButton.type(
               onPressed: onBackPressed ?? () => Navigator.pop(context),
               type: isPrimary
-                  ? PrimaryIconButtonType.close
-                  : PrimaryIconButtonType.back,
+                  ? CustomIconButtonType.close
+                  : CustomIconButtonType.back,
               isLightColor: isPrimary,
             ),
             Gap.w16,

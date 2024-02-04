@@ -2,27 +2,27 @@ import 'package:core/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-/// The `PrimaryIconButton` is a customizable widget that represents a primary
+/// The `CustomIconButton` is a customizable widget that represents a primary
 /// action button in a Flutter application. It can be used with either a predefined
 /// icon type or a custom icon. The button is styled according to the application's
 /// color scheme and size standards.
 ///
 /// ## Usage
-/// To use a `PrimaryIconButton`, you can either provide a predefined icon type
+/// To use a `CustomIconButton`, you can either provide a predefined icon type
 /// through the `type` parameter or a custom icon through the `icon` parameter.
 /// You must also specify the `onPressed` callback to handle button presses.
 ///
 /// ```dart
-/// PrimaryIconButton.type(
+/// CustomIconButton.type(
 ///   onPressed: () {
 ///     // Handle button press
 ///   },
-///   type: PrimaryIconButtonType.close,
+///   type: CustomIconButtonType.close,
 /// )
 /// ```
 ///
 /// ```dart
-/// PrimaryIconButton.custom(
+/// CustomIconButton.icon(
 ///   onPressed: () {
 ///     // Handle button press
 ///   },
@@ -32,7 +32,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 ///
 /// ## Parameters
 /// - `onPressed`: Callback function to be executed when the button is pressed.
-/// - `type`: Predefined icon type from the `PrimaryIconButtonType` enum.
+/// - `type`: Predefined icon type from the `CustomIconButtonType` enum.
 /// - `icon`: Custom icon widget to be used as the button's icon.
 /// - `tooltip`: Tooltip text to be displayed when the button is long-pressed.
 /// - `isLightColor`: A boolean indicating whether the button should use light
@@ -40,7 +40,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 ///
 /// Example:
 /// ```dart
-/// PrimaryIconButton.custom(
+/// CustomIconButton.icon(
 ///   onPressed: () {
 ///     // Handle button press
 ///   },
@@ -49,9 +49,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 ///   isLightColor: true,
 /// )
 /// ```
-class PrimaryIconButton extends StatelessWidget {
-  /// Creates a `PrimaryIconButton` with a predefined icon type.
-  const PrimaryIconButton.type({
+class CustomIconButton extends StatelessWidget {
+  /// Creates a `CustomIconButton` with a predefined icon type.
+  const CustomIconButton.type({
     super.key,
     required this.onPressed,
     required this.type,
@@ -59,8 +59,8 @@ class PrimaryIconButton extends StatelessWidget {
   })  : icon = null,
         tooltip = null;
 
-  /// Creates a `PrimaryIconButton` with a custom icon.
-  const PrimaryIconButton.custom({
+  /// Creates a `CustomIconButton` with a custom icon.
+  const CustomIconButton.icon({
     super.key,
     required this.onPressed,
     required this.icon,
@@ -69,7 +69,7 @@ class PrimaryIconButton extends StatelessWidget {
   }) : type = null;
 
   final void Function()? onPressed;
-  final PrimaryIconButtonType? type;
+  final CustomIconButtonType? type;
   final Widget? icon;
   final String? tooltip;
   final bool isLightColor;
@@ -98,22 +98,22 @@ class PrimaryIconButton extends StatelessWidget {
   }
 }
 
-/// The `PrimaryIconButtonType` enum represents predefined types of icons
-/// that can be used with the `PrimaryIconButton` widget. Each enum value
+/// The `CustomIconButtonType` enum represents predefined types of icons
+/// that can be used with the `CustomIconButton` widget. Each enum value
 /// includes an associated IconData for the icon representation and a tooltip
 /// string to describe the action when the icon is long-pressed.
 ///
 /// ## Usage
-/// This enum is typically used when creating instances of the `PrimaryIconButton`
+/// This enum is typically used when creating instances of the `CustomIconButton`
 /// widget to easily select a specific icon type.
 ///
 /// Example:
 /// ```dart
-/// PrimaryIconButton.type(
+/// CustomIconButton.type(
 ///   onPressed: () {
 ///     // Handle button press
 ///   },
-///   type: PrimaryIconButtonType.close,
+///   type: CustomIconButtonType.close,
 /// )
 /// ```
 ///
@@ -127,14 +127,14 @@ class PrimaryIconButton extends StatelessWidget {
 ///
 /// Example:
 /// ```dart
-/// PrimaryIconButton.type(
+/// CustomIconButton.type(
 ///   onPressed: () {
 ///     // Handle button press
 ///   },
-///   type: PrimaryIconButtonType.back,
+///   type: CustomIconButtonType.back,
 /// )
 /// ```
-enum PrimaryIconButtonType {
+enum CustomIconButtonType {
   /// Represents a close icon.
   close._(Icons.close_rounded, 'Close'),
 
@@ -147,7 +147,7 @@ enum PrimaryIconButtonType {
   /// Represents a notification icon.
   notification._(Icons.notifications_rounded, 'Notification');
 
-  const PrimaryIconButtonType._(this.icon, this.tooltip);
+  const CustomIconButtonType._(this.icon, this.tooltip);
 
   /// The icon data associated with the icon type.
   final IconData icon;
