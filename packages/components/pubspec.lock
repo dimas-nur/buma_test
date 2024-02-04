@@ -229,6 +229,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.7"
+  leave:
+    dependency: "direct overridden"
+    description:
+      path: "../../features/leave"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   lints:
     dependency: transitive
     description:

@@ -16,6 +16,8 @@ dependencies:
     path: ../../features/home
   employee_services:
     path: ../../features/employee_services
+  leave:
+    path: ../../features/leave
 
   # Local Dependencies
   resources:
