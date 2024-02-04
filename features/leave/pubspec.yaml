@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
 
   # Local Dependencies
+  core:
+    path: ../../packages/core
   components:
     path: ../../packages/components
   shared_dependencies:

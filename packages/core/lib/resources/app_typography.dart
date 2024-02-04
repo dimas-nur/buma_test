@@ -35,6 +35,16 @@ class AppTypography {
     color: AppColors.textLightDark,
   );
 
+  /// Body Formatting/Body
+  static TextStyle body = TextStyle(
+    inherit: false,
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    height: 1.33,
+    color: AppColors.textLightDark,
+  );
+
   /// Body Formatting/Small
   static TextStyle bodySmall = TextStyle(
     inherit: false,

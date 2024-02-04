@@ -37,6 +37,9 @@ class AppColors {
   /// Background/background-white
   static const backgroundWhite = Color(0xFFFFFFFF);
 
+  /// Background/background-light
+  static const backgroundLight = Color(0xFFF5F8FA);
+
   /// Text Colors
   ///
   /// Used for text content with different emphasis.
