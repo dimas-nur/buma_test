@@ -27,6 +27,8 @@ dependencies:
   # Dependency Injection
   get_it:
   injectable:
+  ## Others
+  equatable:
 
 dev_dependencies:
   flutter_test:
