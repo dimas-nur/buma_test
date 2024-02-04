@@ -17,7 +17,7 @@ class PrimaryCard extends StatelessWidget {
     this.isWithBorder = true,
     this.borderColor = AppColors.strokeTertiary,
     this.borderWidth = 1,
-    this.splashColor = AppColors.info500,
+    this.splashColor = AppColors.neutral800,
   }) : isRippleOnTop = false;
 
   const PrimaryCard.topRipple({
@@ -33,7 +33,7 @@ class PrimaryCard extends StatelessWidget {
     this.isWithBorder = true,
     this.borderColor = AppColors.strokeTertiary,
     this.borderWidth = 1,
-    this.splashColor = AppColors.info500,
+    this.splashColor = AppColors.neutral800,
   }) : isRippleOnTop = true;
 
   final void Function()? onTap;
@@ -60,6 +60,7 @@ class PrimaryCard extends StatelessWidget {
       width: width,
       height: height,
       margin: margin,
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: (_borderRadius).add(
@@ -91,6 +92,7 @@ class PrimaryCard extends StatelessWidget {
   Widget _body() {
     return ClipRRect(
       borderRadius: _borderRadius,
+      clipBehavior: Clip.antiAlias,
       child: Stack(
         children: [
           Padding(

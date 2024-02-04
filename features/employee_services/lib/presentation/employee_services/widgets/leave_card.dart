@@ -13,10 +13,11 @@ class LeaveCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PrimaryCard(
+      onTap: () {},
       margin: EdgeInsets.symmetric(
         horizontal: 16.h,
       ),
-      onTap: () {},
+      splashColor: AppColors.info500,
       child: Column(
         children: [
           Row(
