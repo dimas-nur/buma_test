@@ -1,0 +1,27 @@
+name: leave
+description: Feature Leave.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local Dependencies
+  shared_dependencies:
+    path: ../../packages/shared_dependencies
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Inherited DEV Dependencies
+  ## Others
+  flutter_lints:
+
+flutter:
+  uses-material-design: true
