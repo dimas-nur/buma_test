@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # Local dependencies
   shared_dependencies:
@@ -43,4 +45,5 @@ flutter_gen:
 flutter:
   assets:
     - assets/images/
+    - assets/illustrations/
     - assets/icons/

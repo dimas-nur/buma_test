@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # Local Dependencies
   core:
@@ -25,6 +27,8 @@ dependencies:
   flutter_screenutil:
   ## Firebase
   firebase_core:
+  ## Others
+  intl:
 
   cupertino_icons: ^1.0.2
 
