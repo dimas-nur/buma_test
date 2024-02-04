@@ -29,6 +29,15 @@ class _LeavePageState extends State<LeavePage> {
             ),
             child: const InformationSection(),
           ),
+          GapSliver.h16,
+          const SliverToBoxAdapter(
+            child: MainLeaveItemSection(),
+          ),
+          GapSliver.h16,
+          const SliverToBoxAdapter(
+            child: OtherLeaveItemSection(),
+          ),
+          GapSliver.h16,
         ],
       ),
     );

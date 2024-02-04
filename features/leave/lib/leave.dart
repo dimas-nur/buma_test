@@ -5,6 +5,7 @@ import 'package:injectable/injectable.dart';
 
 import 'leave.gm.dart';
 
+export 'domain/domain.dart';
 export 'presentation/presentation.dart';
 export 'leave.gm.dart';
 export 'leave.module.dart';
