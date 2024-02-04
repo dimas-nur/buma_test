@@ -19,6 +19,8 @@ class LeaveTypeEntity extends Equatable {
   final int id;
   final LeaveCategory category;
 
+  bool get isOtherCategory => category == LeaveCategory.other;
+
   @override
   List<Object> get props => [name, id, category];
 

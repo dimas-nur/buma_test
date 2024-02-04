@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "Berakhir",
     "Berikut",
     "Bersama",
     "Besar",
@@ -7,15 +8,19 @@
     "cupertino",
     "Cuti",
     "dapat",
+    "dari",
     "dilakukan",
     "Dinas",
     "Diperpanjang",
+    "Hari",
     "Hris",
     "informasi",
     "Izin",
     "Keluarga",
     "Lembur",
+    "lightdark",
     "membuat",
+    "Mulai",
     "overscroll",
     "pengajuan",
     "Perpanjangan",
@@ -27,5 +32,6 @@
     "unfocus",
     "untuk",
     "vsync"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }

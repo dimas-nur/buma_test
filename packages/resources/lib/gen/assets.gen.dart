@@ -14,6 +14,10 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/calendar_add_bold_duotone.svg
+  SvgGenImage get calendarAddBoldDuotone =>
+      const SvgGenImage('assets/icons/calendar_add_bold_duotone.svg');
+
   /// File path: assets/icons/calendar_month.svg
   SvgGenImage get calendarMonth =>
       const SvgGenImage('assets/icons/calendar_month.svg');
@@ -38,11 +42,16 @@ class $AssetsIconsGen {
   /// File path: assets/icons/question.svg
   SvgGenImage get question => const SvgGenImage('assets/icons/question.svg');
 
+  /// File path: assets/icons/suitcase_tag_bold_duotone.svg
+  SvgGenImage get suitcaseTagBoldDuotone =>
+      const SvgGenImage('assets/icons/suitcase_tag_bold_duotone.svg');
+
   /// File path: assets/icons/travel.svg
   SvgGenImage get travel => const SvgGenImage('assets/icons/travel.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        calendarAddBoldDuotone,
         calendarMonth,
         document,
         eventRepeat,
@@ -50,8 +59,33 @@ class $AssetsIconsGen {
         leave,
         observation,
         question,
+        suitcaseTagBoldDuotone,
         travel
       ];
+}
+
+class $AssetsIllustrationsGen {
+  const $AssetsIllustrationsGen();
+
+  /// File path: assets/illustrations/wave_leave.svg
+  SvgGenImage get waveLeave =>
+      const SvgGenImage('assets/illustrations/wave_leave.svg');
+
+  /// File path: assets/illustrations/wave_leave_free.svg
+  SvgGenImage get waveLeaveFree =>
+      const SvgGenImage('assets/illustrations/wave_leave_free.svg');
+
+  /// File path: assets/illustrations/wave_leave_other.svg
+  SvgGenImage get waveLeaveOther =>
+      const SvgGenImage('assets/illustrations/wave_leave_other.svg');
+
+  /// File path: assets/illustrations/wave_leave_yearly.svg
+  SvgGenImage get waveLeaveYearly =>
+      const SvgGenImage('assets/illustrations/wave_leave_yearly.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values =>
+      [waveLeave, waveLeaveFree, waveLeaveOther, waveLeaveYearly];
 }
 
 class $AssetsImagesGen {
@@ -71,6 +105,8 @@ class Assets {
   static const String package = 'resources';
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsIllustrationsGen illustrations =
+      $AssetsIllustrationsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 

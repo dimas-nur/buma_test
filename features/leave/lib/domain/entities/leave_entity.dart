@@ -15,6 +15,8 @@ class LeaveEntity extends Equatable {
   final DateTime? endDate;
   final LeaveTypeEntity type;
 
+  int get duration => (endDate?.difference(startDate).inDays ?? 0) + 1;
+
   @override
   List<Object?> get props => [id, startDate, endDate, type];
 }

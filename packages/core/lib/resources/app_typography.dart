@@ -5,6 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 class AppTypography {
+  /// Heading/Medium - H3
+  static TextStyle h3 = TextStyle(
+    inherit: false,
+    fontFamily: GoogleFonts.poppins().fontFamily,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w700,
+    height: 1.17,
+    color: AppColors.textDark,
+  );
+
   /// Sub Heading/Large - H5
   static TextStyle h5 = TextStyle(
     inherit: false,
@@ -21,7 +31,7 @@ class AppTypography {
     fontFamily: GoogleFonts.poppins().fontFamily,
     fontSize: 14.sp,
     fontWeight: FontWeight.w600,
-    height: 1.45,
+    height: 1.14,
     color: AppColors.textDark,
   );
 

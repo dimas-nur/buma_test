@@ -8,7 +8,14 @@ class AppColors {
   /// Primary Colors
   ///
   /// Used for primary brand elements.
+  /// Primary/Primary600
+  static const primary600 = Color(0xFF06873D);
+
+  /// Primary/Primary500
   static const primary500 = Color(0xFF08A94C);
+
+  /// Primary/Primary100
+  static const primary100 = Color(0xFFD5FADD);
 
   /// Secondary Colors
   ///
@@ -18,7 +25,14 @@ class AppColors {
   /// Info Colors
   ///
   /// Used for informational elements.
+  /// Info/Info600
+  static const info600 = Color(0xFF0363B1);
+
+  /// Info/Info500
   static const info500 = Color(0xFF047CDD);
+
+  /// Info/Info100
+  static const info100 = Color(0xFFCDE5F8);
 
   /// Danger Colors
   ///
@@ -28,6 +42,10 @@ class AppColors {
   /// Neutral Colors
   ///
   /// Used for general-purpose and neutral elements.
+  /// Neutral/Neutral800
+  static const neutral800 = Color(0xFF333F47);
+
+  /// Neutral/Neutral100
   static const neutral300 = Color(0xFFD2DFE8);
 
   /// Background Colors
@@ -56,9 +74,16 @@ class AppColors {
   /// Icon Colors
   ///
   /// Used for iconography and graphical elements.
+  /// Icon/icon-white
   static const iconWhite = Color(0xFFFFFFFF);
+
+  /// Icon/icon-light
   static const iconLight = Color(0xFFB2BFC8);
+
+  /// Icon/icon-lightdark
   static const iconLightDark = Color(0xFF7E93A8);
+
+  /// Icon/icon-dark
   static const iconDark = Color(0xFF333F47);
 
   /// Border Colors
@@ -67,4 +92,10 @@ class AppColors {
   ///
   /// Stroke/Stroke-Tertiary
   static const strokeTertiary = Color(0xFFE8ECF5);
+
+  /// Stroke/Stroke-Success
+  static const strokeSuccess = Color(0xFF06873D);
+
+  /// Stroke/Stroke-Info
+  static const strokeInfo = Color(0xFF0363B1);
 }
