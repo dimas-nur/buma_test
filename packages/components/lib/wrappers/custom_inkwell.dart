@@ -17,6 +17,7 @@ class CustomInkWell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      clipBehavior: Clip.antiAlias,
       color: Colors.transparent,
       child: InkWell(
         highlightColor: splashColor?.withOpacity(.1),

@@ -1,6 +1,5 @@
 import 'package:core/resources/app_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// [INFO]
 ///
@@ -51,6 +50,6 @@ class Gap {
   /// [INFO]
   ///
   /// Gaps for custom width or height outside the 8 pixel rules
-  static SizedBox width(double value) => SizedBox(width: value.w);
-  static SizedBox height(double value) => SizedBox(height: value.h);
+  static SizedBox width(double value) => SizedBox(width: value);
+  static SizedBox height(double value) => SizedBox(height: value);
 }
