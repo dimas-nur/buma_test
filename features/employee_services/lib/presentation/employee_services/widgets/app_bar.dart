@@ -36,13 +36,8 @@ class _EmployeeServicesAppBarState extends State<EmployeeServicesAppBar> {
     return AnimatedBuilder(
       animation: widget.backgroundAnimationController,
       builder: (context, _) {
-        return PrimaryAppBar(
+        return CustomAppBar.primary(
           title: 'Employee Services',
-          leading: PrimaryIconButton.type(
-            onPressed: widget.onBackPressed,
-            type: PrimaryIconButtonType.close,
-            isLightColor: true,
-          ),
           actions: [
             PrimaryIconButton.type(
               onPressed: widget.onSearchPressed,

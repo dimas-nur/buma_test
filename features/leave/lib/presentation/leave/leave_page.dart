@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:components/components.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -12,9 +13,9 @@ class LeavePage extends StatefulWidget {
 class _LeavePageState extends State<LeavePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Leave Page'),
+    return const Scaffold(
+      appBar: CustomAppBar.secondary(
+        title: 'Leave',
       ),
       body: Center(
         child: Text('Leave Page'),
