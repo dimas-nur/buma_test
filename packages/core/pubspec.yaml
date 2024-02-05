@@ -10,12 +10,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # Features
   home:
     path: ../../features/home
   employee_services:
     path: ../../features/employee_services
+  leave:
+    path: ../../features/leave
 
   # Local Dependencies
   resources:
@@ -29,9 +33,12 @@ dependencies:
   flutter_screenutil:
   ## Routing
   auto_route:
-  # Dependency Injection
+  ## Dependency Injection
   get_it:
   injectable:
+  ## Others
+  intl:
+  form_validator:
 
 dev_dependencies:
   flutter_test:

@@ -13,32 +13,32 @@ class TransactionSection extends StatelessWidget {
     MenuItemEntity(
       title: 'Probation',
       iconPath: Assets.icons.observation.path,
-      onTap: () {},
+      onTap: (context) {},
     ),
     MenuItemEntity(
       title: 'Leave',
       iconPath: Assets.icons.leave.path,
-      onTap: () {},
+      onTap: (context) {},
     ),
     MenuItemEntity(
       title: 'Dinas',
       iconPath: Assets.icons.travel.path,
-      onTap: () {},
+      onTap: (context) {},
     ),
     MenuItemEntity(
       title: 'Izin',
       iconPath: Assets.icons.form.path,
-      onTap: () {},
+      onTap: (context) {},
     ),
     MenuItemEntity(
       title: 'Lembur',
       iconPath: Assets.icons.document.path,
-      onTap: () {},
+      onTap: (context) {},
     ),
     MenuItemEntity(
       title: 'Service Center',
       iconPath: Assets.icons.question.path,
-      onTap: () {},
+      onTap: (context) {},
     ),
   ];
 

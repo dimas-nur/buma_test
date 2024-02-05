@@ -13,7 +13,7 @@ class MenuItemEntity {
 
   final String title;
   final String iconPath;
-  final void Function()? onTap;
+  final void Function(BuildContext context)? onTap;
 }
 
 class MenuItem extends StatelessWidget {
@@ -39,7 +39,7 @@ class MenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PrimaryCard(
-      onTap: menu.onTap,
+      onTap: menu.onTap != null ? () => menu.onTap!(context) : null,
       padding: EdgeInsets.symmetric(
         horizontal: (isHorizontal ? 16.w : 0),
         vertical: (isHorizontal ? 16.h : 8.h),
