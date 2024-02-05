@@ -1,8 +1,10 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:components/components.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:leave/domain/entities/leave_entity.dart';
 import 'package:leave/domain/entities/leave_type_entity.dart';
 
 import 'widgets/widgets.dart';
@@ -97,7 +99,24 @@ class _LeaveRequestPageState extends State<LeaveRequestPage> {
           ),
         ),
       ),
-      bottomNavigationBar: const BottomActionBar(),
+      bottomNavigationBar: BottomActionBar(
+        onCancelPressed: () => context.popRoute(),
+        onAddPressed: () {
+          if (_formKey.currentState?.validate() != true) return;
+
+          BottomSheetHelper.showPrimaryBottomSheet(
+            context,
+            builder: (context) => RequestLeaveModal(
+              leave: LeaveEntity(
+                id: -1,
+                startDate: _selectedStartDate!,
+                endDate: _selectedEndDate,
+                type: _selectedTypeLeave!,
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 

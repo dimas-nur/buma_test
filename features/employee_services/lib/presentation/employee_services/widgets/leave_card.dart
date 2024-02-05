@@ -36,6 +36,7 @@ class LeaveCard extends StatelessWidget {
               PrimaryDivider.vertical(
                 height: 56.h,
                 borderWidth: 2.w,
+                isTransparency: true,
               ),
               Gap.w8,
               const Expanded(

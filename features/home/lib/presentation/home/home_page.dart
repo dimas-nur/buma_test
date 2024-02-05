@@ -12,6 +12,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(milliseconds: 500), () {
+      context.pushRoute(const LeaveRequestRoute());
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

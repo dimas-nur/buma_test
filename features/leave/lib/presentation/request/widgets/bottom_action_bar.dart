@@ -6,7 +6,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class BottomActionBar extends StatelessWidget {
   const BottomActionBar({
     super.key,
+    required this.onCancelPressed,
+    required this.onAddPressed,
   });
+
+  final void Function()? onCancelPressed;
+  final void Function()? onAddPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +31,7 @@ class BottomActionBar extends StatelessWidget {
           children: [
             Expanded(
               child: CustomButton.secondary(
-                onPressed: () {},
+                onPressed: onCancelPressed,
                 isStretched: true,
                 text: 'Batal',
               ),
@@ -34,7 +39,7 @@ class BottomActionBar extends StatelessWidget {
             Gap.w16,
             Expanded(
               child: CustomButton.primary(
-                onPressed: () {},
+                onPressed: onAddPressed,
                 isStretched: true,
                 text: 'Tambahkan',
                 prefixIconPath: Assets.icons.add.path,
