@@ -24,6 +24,7 @@ dependencies:
   # Inherited Dependencies
   # UI
   flutter_screenutil:
+  dropdown_button2:
   ## Routing
   auto_route:
   # Dependency Injection

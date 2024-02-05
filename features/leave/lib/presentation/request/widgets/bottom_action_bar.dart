@@ -1,10 +1,7 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:components/buttons/custom_button.dart';
-import 'package:core/resources/app_colors.dart';
+import 'package:components/components.dart';
+import 'package:core/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../leave.gm.dart';
 
 class BottomActionBar extends StatelessWidget {
   const BottomActionBar({
@@ -21,18 +18,29 @@ class BottomActionBar extends StatelessWidget {
           color: AppColors.strokeTertiary,
           height: 1,
         ),
-        Padding(
+        CustomRow(
           padding: EdgeInsets.symmetric(
             horizontal: 16.w,
             vertical: 16.h,
           ),
-          child: CustomButton.primary(
-            onPressed: () => context.router.push(
-              const LeaveRequestRoute(),
+          children: [
+            Expanded(
+              child: CustomButton.secondary(
+                onPressed: () {},
+                isStretched: true,
+                text: 'Batal',
+              ),
             ),
-            isStretched: true,
-            text: 'Buat Form Leave',
-          ),
+            Gap.w16,
+            Expanded(
+              child: CustomButton.primary(
+                onPressed: () {},
+                isStretched: true,
+                text: 'Tambahkan',
+                prefixIconPath: Assets.icons.add.path,
+              ),
+            ),
+          ],
         ),
       ],
     );

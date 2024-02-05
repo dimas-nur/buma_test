@@ -14,7 +14,9 @@ class FavoriteMenuSection extends StatelessWidget {
     MenuItemEntity(
       title: 'Leave',
       iconPath: Assets.icons.leave.path,
-      onTap: (context) => context.pushRoute(const LeaveRoute()),
+      onTap: (context) => context.pushRoute(
+        const LeaveRoute(),
+      ),
     ),
   ];
 

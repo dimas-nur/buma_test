@@ -24,7 +24,7 @@ class _LeavePageState extends State<LeavePage> {
         slivers: [
           GapSliver.h16,
           CustomSliverBox(
-            padding: EdgeInsets.symmetric(
+            margin: EdgeInsets.symmetric(
               horizontal: 16.w,
             ),
             child: const InformationSection(),
