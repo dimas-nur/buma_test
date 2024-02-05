@@ -2,6 +2,7 @@ import 'package:core/di/locator.dart';
 import 'package:core/flavor/flavor_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:form_validator/form_validator.dart';
 import 'package:intl/intl.dart';
 
 import 'buma_hris_app.dart';
@@ -34,4 +35,5 @@ Future<void> _initFirebase(String env) async {
 
 void _initLocale() {
   Intl.defaultLocale = 'id';
+  ValidationBuilder.setLocale('id');
 }
