@@ -36,24 +36,19 @@ class _EmployeeServicesAppBarState extends State<EmployeeServicesAppBar> {
     return AnimatedBuilder(
       animation: widget.backgroundAnimationController,
       builder: (context, _) {
-        return PrimaryAppBar(
+        return CustomAppBar.primary(
           title: 'Employee Services',
-          leading: PrimaryIconButton.type(
-            onPressed: widget.onBackPressed,
-            type: PrimaryIconButtonType.close,
-            isLightColor: true,
-          ),
           actions: [
-            PrimaryIconButton.type(
+            CustomIconButton.type(
               onPressed: widget.onSearchPressed,
-              type: PrimaryIconButtonType.search,
+              type: CustomIconButtonType.search,
               isLightColor: true,
             ),
             Gap.w8,
             PrimaryBadge.dot(
-              child: PrimaryIconButton.type(
+              child: CustomIconButton.type(
                 onPressed: widget.onNotificationPressed,
-                type: PrimaryIconButtonType.notification,
+                type: CustomIconButtonType.notification,
                 isLightColor: true,
               ),
             ),

@@ -2,6 +2,9 @@ import 'package:core/di/locator.dart';
 import 'package:core/flavor/flavor_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:form_validator/form_validator.dart';
+import 'package:intl/intl.dart';
 
 import 'buma_hris_app.dart';
 
@@ -14,8 +17,13 @@ Future<void> run(String env) async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await _initFirebase(env);
-
   await configureDependencies(env);
+
+  _initLocale();
+
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
 
   runApp(const BumaHrisApp());
 }
@@ -28,4 +36,9 @@ Future<void> _initFirebase(String env) async {
           : firebase_dev.DefaultFirebaseOptions.currentPlatform;
 
   await Firebase.initializeApp(options: firebaseOptions);
+}
+
+void _initLocale() {
+  Intl.defaultLocale = 'id';
+  ValidationBuilder.setLocale('id');
 }

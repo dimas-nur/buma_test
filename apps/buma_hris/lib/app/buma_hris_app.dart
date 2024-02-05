@@ -1,6 +1,7 @@
 import 'package:components/banners/banner_flavor.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BumaHrisApp extends StatefulWidget {
@@ -26,10 +27,20 @@ class _BumaHrisAppState extends State<BumaHrisApp> {
         message: FlavorConfig.instance.name.toUpperCase(),
         isProduction: FlavorConfig.isProduction,
         child: MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           title: FlavorConfig.instance.values.appName,
           theme: AppTheme.light,
           // darkTheme: AppTheme.dark,
-          debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('id'),
+            Locale('en'),
+          ],
+          locale: const Locale('id'),
           routerConfig: _appRouter.config(),
           builder: (context, widget) {
             return MediaQuery(
