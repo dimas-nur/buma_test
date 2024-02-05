@@ -1,9 +1,45 @@
 import 'package:core/resources/app_sizes.dart';
 import 'package:flutter/material.dart';
 
-/// [INFO]
+/// The `Gap` class provides a set of predefined constant-sized `SizedBox` widgets
+/// to create consistent gaps between elements in the app. These gaps follow the 8-pixel grid rule,
+/// ensuring uniform spacing and alignment throughout the user interface.
 ///
-/// Constant for gaps to be used in the app with respecting 8 pixel rules
+/// ## Usage
+/// To use `Gap`, simply choose the desired gap size from the available constants and place it
+/// between your widgets. These gaps help maintain a visually pleasing and well-organized layout.
+///
+/// Example:
+/// ```dart
+/// // Create a vertical gap of 16 pixels between two widgets
+/// Column(
+///   children: [
+///     SomeWidget(),
+///     Gap.h16,
+///     AnotherWidget(),
+///   ],
+/// );
+/// ```
+///
+/// ## Constants
+/// - `w2`, `w4`, `w8`, `w12`, `w16`, `w20`, `w24`, `w28`, `w32`, `w36`, `w40`, `w48`, `w52`, `w56`, `w64`, `w72`, `w80`:
+///   Constants for horizontal gaps with widths ranging from 2 to 80 pixels.
+/// - `h2`, `h4`, `h8`, `h12`, `h16`, `h20`, `h24`, `h28`, `h32`, `h36`, `h40`, `h48`, `h52`, `h56`, `h64`, `h72`, `h80`:
+///   Constants for vertical gaps with heights ranging from 2 to 80 pixels.
+/// - `width(double value)`: Creates a custom-width gap with the specified value.
+/// - `height(double value)`: Creates a custom-height gap with the specified value.
+///
+/// Example:
+/// ```dart
+/// // Create a custom-width gap with a width of 24 pixels
+/// Row(
+///   children: [
+///     SomeWidget(),
+///     Gap.width(24),
+///     AnotherWidget(),
+///   ],
+/// );
+/// ```
 class Gap {
   /// [INFO]
   ///

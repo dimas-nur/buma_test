@@ -57,31 +57,132 @@ enum ToastInlineType {
       };
 }
 
+/// The `ToastInline` widget displays a simple inline toast with a customizable message and optional icon.
+/// It is designed to provide visual feedback to users for various types of information such as errors,
+/// success messages, warnings, and more.
+///
+/// ## Usage
+/// To use `ToastInline`, create an instance of the widget by specifying the `message` and `type`.
+/// You can customize its appearance by setting parameters such as `isWithIcon`.
+///
+/// Example:
+/// ```dart
+/// // Create an inline toast with an error message and an icon
+/// ToastInline.error(
+///   message: 'Error occurred!',
+///   isWithIcon: true,
+/// );
+///
+/// // Create an inline toast with a success message without an icon
+/// ToastInline.success(
+///   message: 'Operation successful!',
+///   isWithIcon: false,
+/// );
+/// ```
+///
+/// ## Parameters
+/// - `message`: The message to be displayed in the inline toast.
+/// - `type`: The type of inline toast, which determines its color, background color, and icon.
+/// - `isWithIcon`: Set to `true` to display an icon with the inline toast, or `false` to hide it.
+///
+/// Example:
+/// ```dart
+/// // Create an inline toast with a warning message and an icon
+/// ToastInline.warning(
+///   message: 'Proceed with caution!',
+///   isWithIcon: true,
+/// );
+/// ```
 class ToastInline extends StatelessWidget {
+  /// Creates an inline toast with an error message and an optional icon.
+  ///
+  /// The `message` parameter represents the content of the inline toast.
+  /// The `isWithIcon` parameter determines whether to display an icon with the inline toast.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Create an inline toast with an error message and an icon
+  /// ToastInline.error(
+  ///   message: 'Error occurred!',
+  ///   isWithIcon: true,
+  /// );
+  /// ```
   const ToastInline.error({
     super.key,
     required this.message,
     this.isWithIcon = true,
   }) : type = ToastInlineType.error;
 
+  /// Creates an inline toast with an information message and an optional icon.
+  ///
+  /// The `message` parameter represents the content of the inline toast.
+  /// The `isWithIcon` parameter determines whether to display an icon with the inline toast.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Create an inline toast with an information message and an icon
+  /// ToastInline.info(
+  ///   message: 'Additional information!',
+  ///   isWithIcon: true,
+  /// );
+  /// ```
   const ToastInline.info({
     super.key,
     required this.message,
     this.isWithIcon = true,
   }) : type = ToastInlineType.info;
 
+  /// Creates an inline toast with a success message and an optional icon.
+  ///
+  /// The `message` parameter represents the content of the inline toast.
+  /// The `isWithIcon` parameter determines whether to display an icon with the inline toast.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Create an inline toast with a success message and an icon
+  /// ToastInline.success(
+  ///   message: 'Operation successful!',
+  ///   isWithIcon: true,
+  /// );
+  /// ```
   const ToastInline.success({
     super.key,
     required this.message,
     this.isWithIcon = true,
   }) : type = ToastInlineType.success;
 
+  /// Creates an inline toast with a warning message and an optional icon.
+  ///
+  /// The `message` parameter represents the content of the inline toast.
+  /// The `isWithIcon` parameter determines whether to display an icon with the inline toast.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Create an inline toast with a warning message and an icon
+  /// ToastInline.warning(
+  ///   message: 'Proceed with caution!',
+  ///   isWithIcon: true,
+  /// );
+  /// ```
   const ToastInline.warning({
     super.key,
     required this.message,
     this.isWithIcon = true,
   }) : type = ToastInlineType.warning;
 
+  /// Creates an inline toast with a neutral message and an optional icon.
+  ///
+  /// The `message` parameter represents the content of the inline toast.
+  /// The `isWithIcon` parameter determines whether to display an icon with the inline toast.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Create an inline toast with a neutral message and an icon
+  /// ToastInline.neutral(
+  ///   message: 'A neutral message.',
+  ///   isWithIcon: true,
+  /// );
+  /// ```
   const ToastInline.neutral({
     super.key,
     required this.message,

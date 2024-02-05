@@ -6,6 +6,64 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../labels/label_field.dart';
 
+/// The `DateInput` widget provides a customizable date input field with support for labels,
+/// hints, error messages, and additional information. Users can select a date from a date picker
+/// that pops up when the text field is tapped. The selected date is displayed in the input field.
+///
+/// ## Usage
+/// To use `DateInput`, create an instance of the widget by providing the necessary parameters,
+/// such as `label`, `hint`, and `onChanged`. Customize its appearance and behavior using optional
+/// parameters like `isRequired`, `isEnabled`, and `validator`. The `onChanged` callback is triggered
+/// when the user selects a date.
+///
+/// Example:
+/// ```dart
+/// // Create a date input with a label and hint
+/// DateInput(
+///   label: 'Birthdate',
+///   hint: 'DD MMM YYYY',
+///   initialDate: DateTime.now(),
+///   firstDate: DateTime(1900),
+///   lastDate: DateTime.now(),
+///   onChanged: (selectedDate) {
+///     print('Selected Date: $selectedDate');
+///   },
+/// );
+/// ```
+///
+/// ## Parameters
+/// - `controller`: The `TextEditingController` to control the text input field.
+/// - `hint`: The hint text to display when the input field is empty.
+/// - `label`: The label text for the input field.
+/// - `information`: Additional information or error message to display below the input field.
+/// - `initialDate`: The initial selected date when the date picker opens.
+/// - `firstDate`: The earliest allowable date in the date picker.
+/// - `lastDate`: The latest allowable date in the date picker.
+/// - `isRequired`: Indicates whether the input is required, displaying a '*' next to the label.
+/// - `isEnabled`: Enables or disables the text input field.
+/// - `onChanged`: A callback function triggered when the user selects a date.
+/// - `validator`: A function that performs input validation and returns an error message if needed.
+///
+/// Example:
+/// ```dart
+/// // Create a date input with a custom validator
+/// DateInput(
+///   label: 'Appointment Date',
+///   hint: 'DD MMM YYYY',
+///   initialDate: DateTime.now(),
+///   firstDate: DateTime.now(),
+///   lastDate: DateTime.now().add(Duration(days: 365)),
+///   onChanged: (selectedDate) {
+///     print('Selected Date: $selectedDate');
+///   },
+///   validator: (value) {
+///     if (value == null) {
+///       return 'Please select a date';
+///     }
+///     return null;
+///   },
+/// );
+/// ```
 class DateInput extends StatefulWidget {
   const DateInput({
     super.key,

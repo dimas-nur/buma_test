@@ -6,6 +6,52 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../labels/label_field.dart';
 
+/// The `SwitchInput` widget provides a customizable switch input field with support for labels,
+/// hints, and additional information. Users can toggle the switch to change its state.
+///
+/// ## Usage
+/// To use `SwitchInput`, create an instance of the widget by providing the necessary parameters,
+/// such as `label`, `hint`, and `onChanged`. Customize its appearance and behavior using optional
+/// parameters like `isRequired`, `isEnabled`, and `information`. The `onChanged` callback is triggered
+/// when the user toggles the switch.
+///
+/// Example:
+/// ```dart
+/// // Create a switch input with a label and onChanged callback
+/// SwitchInput(
+///   label: 'Enable Notifications',
+///   hint: 'Turn on to receive notifications',
+///   value: isNotificationsEnabled,
+///   onChanged: (isEnabled) {
+///     print('Notifications Enabled: $isEnabled');
+///     // Update the state or perform actions based on the switch state
+///   },
+/// );
+/// ```
+///
+/// ## Parameters
+/// - `hint`: The hint text to display next to the switch.
+/// - `label`: The label text for the switch.
+/// - `information`: Additional information to display below the switch.
+/// - `value`: The current state of the switch (true for ON, false for OFF).
+/// - `isRequired`: Indicates whether the switch is required, displaying a '*' next to the label.
+/// - `isEnabled`: Enables or disables the switch input field.
+/// - `onChanged`: A callback function triggered when the user toggles the switch.
+///
+/// Example:
+/// ```dart
+/// // Create a switch input with additional information
+/// SwitchInput(
+///   label: 'Dark Mode',
+///   hint: 'Toggle to enable dark mode',
+///   value: isDarkModeEnabled,
+///   onChanged: (isEnabled) {
+///     print('Dark Mode Enabled: $isEnabled');
+///     // Update the state or perform actions based on the switch state
+///   },
+///   information: 'Enable dark mode for a better viewing experience.',
+/// );
+/// ```
 class SwitchInput extends StatelessWidget {
   const SwitchInput({
     super.key,
