@@ -6,17 +6,17 @@ class PrimaryDivider extends StatelessWidget {
   const PrimaryDivider.vertical({
     super.key,
     this.height,
-    this.borderWidth = 2,
+    this.borderWidth = 1,
     this.isRounded = true,
-    this.isTransparency = true,
+    this.isTransparency = false,
   }) : width = borderWidth;
 
   const PrimaryDivider.horizontal({
     super.key,
     this.width,
-    this.borderWidth = 2,
+    this.borderWidth = 1,
     this.isRounded = true,
-    this.isTransparency = true,
+    this.isTransparency = false,
   }) : height = borderWidth;
 
   final double? height;
@@ -28,8 +28,8 @@ class PrimaryDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height != null ? height?.h : double.infinity,
-      width: width != null ? width?.w : double.infinity,
+      height: height?.h ?? double.infinity,
+      width: width?.w ?? double.infinity,
       decoration: BoxDecoration(
         color: AppColors.strokeTertiary.withOpacity(isTransparency ? 0.5 : 1),
         borderRadius: isRounded ? BorderRadius.circular(borderWidth.r) : null,
