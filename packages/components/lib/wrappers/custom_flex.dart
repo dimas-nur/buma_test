@@ -6,6 +6,7 @@ class CustomColumn extends StatelessWidget {
     super.key,
     required this.children,
     this.padding,
+    this.margin,
     this.mainAxisSize = MainAxisSize.max,
     this.background,
     this.mainAxisAlignment = MainAxisAlignment.start,
@@ -14,6 +15,8 @@ class CustomColumn extends StatelessWidget {
 
   final List<Widget> children;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
+
   final Color? background;
   final MainAxisSize mainAxisSize;
   final MainAxisAlignment mainAxisAlignment;
@@ -23,6 +26,7 @@ class CustomColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: padding,
+      margin: margin,
       color: background,
       child: Column(
         mainAxisSize: mainAxisSize,
@@ -40,6 +44,7 @@ class CustomRow extends StatelessWidget {
     super.key,
     required this.children,
     this.padding,
+    this.margin,
     this.background,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -47,6 +52,7 @@ class CustomRow extends StatelessWidget {
 
   final List<Widget> children;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
   final Color? background;
   final MainAxisAlignment mainAxisAlignment;
   final CrossAxisAlignment crossAxisAlignment;
@@ -55,6 +61,7 @@ class CustomRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: padding,
+      margin: margin,
       color: background,
       child: Row(
         mainAxisAlignment: mainAxisAlignment,
