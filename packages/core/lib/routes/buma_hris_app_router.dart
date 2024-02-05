@@ -68,7 +68,11 @@ class BumaHrisAppRouter extends $BumaHrisAppRouter {
     _routeBuilder(
       path: '/leave',
       page: LeaveRoute.page,
-    )
+    ),
+    _routeBuilder(
+      path: '/leave-request',
+      page: LeaveRequestRoute.page,
+    ),
   ];
 }
 

@@ -14,6 +14,9 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/add.svg
+  SvgGenImage get add => const SvgGenImage('assets/icons/add.svg');
+
   /// File path: assets/icons/calendar_add_bold_duotone.svg
   SvgGenImage get calendarAddBoldDuotone =>
       const SvgGenImage('assets/icons/calendar_add_bold_duotone.svg');
@@ -25,12 +28,27 @@ class $AssetsIconsGen {
   /// File path: assets/icons/document.svg
   SvgGenImage get document => const SvgGenImage('assets/icons/document.svg');
 
+  /// File path: assets/icons/error_outline.svg
+  SvgGenImage get errorOutline =>
+      const SvgGenImage('assets/icons/error_outline.svg');
+
   /// File path: assets/icons/event_repeat.svg
   SvgGenImage get eventRepeat =>
       const SvgGenImage('assets/icons/event_repeat.svg');
 
   /// File path: assets/icons/form.svg
   SvgGenImage get form => const SvgGenImage('assets/icons/form.svg');
+
+  /// File path: assets/icons/info.svg
+  SvgGenImage get info => const SvgGenImage('assets/icons/info.svg');
+
+  /// File path: assets/icons/keyboard_arrow_down.svg
+  SvgGenImage get keyboardArrowDown =>
+      const SvgGenImage('assets/icons/keyboard_arrow_down.svg');
+
+  /// File path: assets/icons/keyboard_arrow_up.svg
+  SvgGenImage get keyboardArrowUp =>
+      const SvgGenImage('assets/icons/keyboard_arrow_up.svg');
 
   /// File path: assets/icons/leave.svg
   SvgGenImage get leave => const SvgGenImage('assets/icons/leave.svg');
@@ -51,11 +69,16 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        add,
         calendarAddBoldDuotone,
         calendarMonth,
         document,
+        errorOutline,
         eventRepeat,
         form,
+        info,
+        keyboardArrowDown,
+        keyboardArrowUp,
         leave,
         observation,
         question,

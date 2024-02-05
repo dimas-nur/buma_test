@@ -6,11 +6,13 @@ class CustomSliverBox extends StatelessWidget {
     super.key,
     required this.child,
     this.padding,
+    this.margin,
     this.background,
   });
 
   final Widget child;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
   final Color? background;
 
   @override
@@ -18,6 +20,7 @@ class CustomSliverBox extends StatelessWidget {
     return SliverToBoxAdapter(
       child: Container(
         padding: padding,
+        margin: margin,
         color: background,
         child: child,
       ),
