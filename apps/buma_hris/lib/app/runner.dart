@@ -2,6 +2,7 @@ import 'package:core/di/locator.dart';
 import 'package:core/flavor/flavor_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:form_validator/form_validator.dart';
 import 'package:intl/intl.dart';
 
@@ -19,6 +20,10 @@ Future<void> run(String env) async {
   await configureDependencies(env);
 
   _initLocale();
+
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
 
   runApp(const BumaHrisApp());
 }
