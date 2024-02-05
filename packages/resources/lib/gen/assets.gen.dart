@@ -99,6 +99,22 @@ class $AssetsIconsGen {
 class $AssetsIllustrationsGen {
   const $AssetsIllustrationsGen();
 
+  /// File path: assets/illustrations/dialog_confirmation.svg
+  SvgGenImage get dialogConfirmation =>
+      const SvgGenImage('assets/illustrations/dialog_confirmation.svg');
+
+  /// File path: assets/illustrations/dialog_error.svg
+  SvgGenImage get dialogError =>
+      const SvgGenImage('assets/illustrations/dialog_error.svg');
+
+  /// File path: assets/illustrations/dialog_information.svg
+  SvgGenImage get dialogInformation =>
+      const SvgGenImage('assets/illustrations/dialog_information.svg');
+
+  /// File path: assets/illustrations/dialog_success.svg
+  SvgGenImage get dialogSuccess =>
+      const SvgGenImage('assets/illustrations/dialog_success.svg');
+
   /// File path: assets/illustrations/wave_leave.svg
   SvgGenImage get waveLeave =>
       const SvgGenImage('assets/illustrations/wave_leave.svg');
@@ -116,8 +132,16 @@ class $AssetsIllustrationsGen {
       const SvgGenImage('assets/illustrations/wave_leave_yearly.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [waveLeave, waveLeaveFree, waveLeaveOther, waveLeaveYearly];
+  List<SvgGenImage> get values => [
+        dialogConfirmation,
+        dialogError,
+        dialogInformation,
+        dialogSuccess,
+        waveLeave,
+        waveLeaveFree,
+        waveLeaveOther,
+        waveLeaveYearly
+      ];
 }
 
 class $AssetsImagesGen {

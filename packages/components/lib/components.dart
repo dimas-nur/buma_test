@@ -6,6 +6,7 @@ export 'banners/banners.dart';
 export 'bottom_sheet/bottom_sheet.dart';
 export 'buttons/buttons.dart';
 export 'cards/cards.dart';
+export 'dialogs/dialogs.dart';
 export 'dividers/dividers.dart';
 export 'gaps/gaps.dart';
 export 'inputs/inputs.dart';
