@@ -9,6 +9,40 @@ class RequestLeaveModal extends StatelessWidget {
 
   final LeaveEntity leave;
 
+  void _sendRequestLeave(BuildContext context) {
+    Navigator.pop(context);
+    showDialog(
+      context: context,
+      builder: (context) {
+        return CustomDialog.success(
+          message: 'Aktivitas cuti kamu berhasil ditambahkan',
+          onPositiveTap: () {
+            Navigator.of(context)
+              ..pop()
+              ..pop();
+          },
+        );
+      },
+    );
+  }
+
+  void _cancelRequestLeave(BuildContext context) {
+    Navigator.pop(context);
+    showDialog(
+      context: context,
+      builder: (context) {
+        return CustomDialog.error(
+          message: 'Aktivitas cuti kamu batal ditambahkan',
+          onPositiveTap: () {
+            Navigator.of(context)
+              ..pop()
+              ..pop();
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return CustomBottomSheet(
@@ -61,7 +95,7 @@ class RequestLeaveModal extends StatelessWidget {
           const PrimaryDivider.horizontal(),
           Gap.h16,
           Text(
-            'Apakah kamu yakin ingin menambahkan ativitas cuti ini?',
+            'Apakah kamu yakin ingin menambahkan aktivitas cuti ini?',
             style: AppTypography.body.colorDark,
             textAlign: TextAlign.center,
           ),
@@ -70,7 +104,7 @@ class RequestLeaveModal extends StatelessWidget {
             children: [
               Expanded(
                 child: CustomButton.secondary(
-                  onPressed: () {},
+                  onPressed: () => _cancelRequestLeave(context),
                   isStretched: true,
                   text: 'Batal',
                 ),
@@ -78,7 +112,7 @@ class RequestLeaveModal extends StatelessWidget {
               Gap.w16,
               Expanded(
                 child: CustomButton.primary(
-                  onPressed: () {},
+                  onPressed: () => _sendRequestLeave(context),
                   isStretched: true,
                   text: 'Tambahkan',
                   prefixIconPath: Assets.icons.add.path,
