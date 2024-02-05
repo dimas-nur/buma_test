@@ -1,3 +1,4 @@
+import 'package:components/gaps/gap.dart';
 import 'package:core/extensions/text_style.extension.dart';
 import 'package:core/resources/resources.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../progress_indicator/custom_progress_indicator.dart';
 
 enum CustomButtonType {
-  primary(AppColors.info600, AppColors.textWhite),
+  primary(AppColors.info500, AppColors.textWhite),
   secondary(AppColors.backgroundLight, AppColors.textDark),
   tertiary(Colors.transparent, AppColors.primary500);
 
@@ -114,6 +115,7 @@ class CustomButton extends StatefulWidget {
     required this.text,
     this.isLoading = false,
     this.isStretched = false,
+    this.prefixIconPath,
   }) : type = CustomButtonType.primary;
 
   /// Creates a secondary CustomButton.
@@ -132,6 +134,7 @@ class CustomButton extends StatefulWidget {
     required this.text,
     this.isLoading = false,
     this.isStretched = false,
+    this.prefixIconPath,
   }) : type = CustomButtonType.secondary;
 
   /// Creates a tertiary CustomButton.
@@ -150,6 +153,7 @@ class CustomButton extends StatefulWidget {
     required this.text,
     this.isLoading = false,
     this.isStretched = false,
+    this.prefixIconPath,
   }) : type = CustomButtonType.tertiary;
 
   final void Function()? onPressed;
@@ -157,6 +161,7 @@ class CustomButton extends StatefulWidget {
   final bool isLoading;
   final CustomButtonType type;
   final bool isStretched;
+  final String? prefixIconPath;
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
@@ -165,16 +170,21 @@ class CustomButton extends StatefulWidget {
 class _CustomButtonState extends State<CustomButton> {
   bool isTapped = false;
 
+  bool get isEnabled => widget.onPressed != null;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: widget.isLoading ? null : widget.onPressed,
-      onTapDown: (_) =>
-          widget.isLoading ? null : setState(() => isTapped = true),
-      onTapUp: (_) =>
-          widget.isLoading ? null : setState(() => isTapped = false),
-      onTapCancel: () =>
-          widget.isLoading ? null : setState(() => isTapped = false),
+      onTapDown: (_) => widget.isLoading || widget.onPressed == null
+          ? null
+          : setState(() => isTapped = true),
+      onTapUp: (_) => widget.isLoading || widget.onPressed == null
+          ? null
+          : setState(() => isTapped = false),
+      onTapCancel: () => widget.isLoading || widget.onPressed == null
+          ? null
+          : setState(() => isTapped = false),
       child: SizedBox(
         height: 40.h,
         child: Stack(
@@ -184,12 +194,12 @@ class _CustomButtonState extends State<CustomButton> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: widget.type.backgroundColor
-                        .withOpacity(widget.isLoading ? 0.5 : 1),
+                        .withOpacity(widget.isLoading || !isEnabled ? 0.5 : 1),
                     borderRadius: BorderRadius.circular(5.r),
                   ),
                 ),
               ),
-            if (!widget.isLoading)
+            if (!widget.isLoading && isEnabled)
               Positioned.fill(
                 left: 1,
                 top: 1,
@@ -249,10 +259,31 @@ class _CustomButtonState extends State<CustomButton> {
               color: widget.type.textColor,
               size: 14.r,
             )
-          : Text(
-              widget.text,
-              textAlign: TextAlign.center,
-              style: AppTypography.body.toColor(widget.type.textColor),
+          : Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (widget.prefixIconPath != null) ...[
+                  SvgGenImage(widget.prefixIconPath!).svg(
+                    width: 16.w,
+                    height: 16.h,
+                    // ignore: deprecated_member_use
+                    color:
+                        widget.type.textColor.withOpacity(isEnabled ? 1 : 0.5),
+                  ),
+                  Gap.w4,
+                ],
+                Flexible(
+                  child: Text(
+                    widget.text,
+                    textAlign: TextAlign.center,
+                    style: AppTypography.body.toColor(
+                      widget.type.textColor.withOpacity(isEnabled ? 1 : 0.5),
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
             ),
     );
   }

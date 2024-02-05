@@ -25,6 +25,10 @@ class $AssetsIconsGen {
   SvgGenImage get calendarMonth =>
       const SvgGenImage('assets/icons/calendar_month.svg');
 
+  /// File path: assets/icons/check_circle.svg
+  SvgGenImage get checkCircle =>
+      const SvgGenImage('assets/icons/check_circle.svg');
+
   /// File path: assets/icons/document.svg
   SvgGenImage get document => const SvgGenImage('assets/icons/document.svg');
 
@@ -67,11 +71,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/travel.svg
   SvgGenImage get travel => const SvgGenImage('assets/icons/travel.svg');
 
+  /// File path: assets/icons/warning.svg
+  SvgGenImage get warning => const SvgGenImage('assets/icons/warning.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         add,
         calendarAddBoldDuotone,
         calendarMonth,
+        checkCircle,
         document,
         errorOutline,
         eventRepeat,
@@ -83,7 +91,8 @@ class $AssetsIconsGen {
         observation,
         question,
         suitcaseTagBoldDuotone,
-        travel
+        travel,
+        warning
       ];
 }
 

@@ -38,6 +38,7 @@ dependencies:
   injectable:
   ## Others
   intl:
+  form_validator:
 
 dev_dependencies:
   flutter_test:
