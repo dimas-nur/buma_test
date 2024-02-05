@@ -37,13 +37,32 @@ class AppColors {
   /// Danger Colors
   ///
   /// Used to highlight potential issues or errors.
+  /// Danger/Danger500
   static const danger500 = Color(0xFFD62926);
+
+  /// Danger/Danger100
+  static const danger100 = Color(0xFFF7D4D4);
+
+  /// Warning Colors
+  ///
+  /// Used to highlight potential issues or errors.
+  /// Warning/Warning600
+  static const warning600 = Color(0xFFCAA904);
+
+  /// Warning/Warning100
+  static const warning100 = Color(0xFFFEF6CD);
 
   /// Neutral Colors
   ///
   /// Used for general-purpose and neutral elements.
   /// Neutral/Neutral800
   static const neutral800 = Color(0xFF333F47);
+
+  /// Neutral/Neutral500
+  static const neutral500 = Color(0xFF7E93A8);
+
+  /// Neutral/Neutral400
+  static const neutral400 = Color(0xFFB2BFC8);
 
   /// Neutral/Neutral100
   static const neutral300 = Color(0xFFD2DFE8);
@@ -58,12 +77,18 @@ class AppColors {
   /// Background/background-light
   static const backgroundLight = Color(0xFFF5F8FA);
 
+  /// Background/background-dark
+  static const backgroundDark = Color(0xFF333F47);
+
   /// Text Colors
   ///
   /// Used for text content with different emphasis.
   ///
   /// Text/text-white
   static const textWhite = Color(0xFFFFFFFF);
+
+  /// Text/text-light
+  static const textLight = Color(0xFFB2BFC8);
 
   /// Text/text-lightdark
   static const textLightDark = Color(0xFF7E93A8);

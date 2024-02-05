@@ -128,6 +128,9 @@ extension XTextStyle on TextStyle {
   /// Change to color `Text/text-white`
   TextStyle get colorWhite => toColor(AppColors.textWhite);
 
+  /// Change to color `Text/text-light`
+  TextStyle get colorLight => toColor(AppColors.textLight);
+
   /// Change to color `Text/text-lightdark`
   TextStyle get colorLightDark => toColor(AppColors.textLightDark);
 
